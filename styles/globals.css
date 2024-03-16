@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scrollbar-width:thin;
+  scrollbar-color: #72b626 transparent;
+}
+
+button {
+  cursor: pointer !important;
+}
+
+::selection {
+  background-color: #72b626;
+  color: white;
+}
+
+.container {
+  margin-inline: auto;
+  max-width: 1200px;
+}
+
+.progress-ring__circle {
+  stroke-dasharray: 400 400;
+  transition: stroke-dashoffset 0.35s;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+@layer base {
+  body {
+    @apply bg-white dark:bg-default;
+  }
+
+  .blank_space {
+    @apply relative pb-[60px] after:absolute after:bottom-0 after:right-0 after:h-[60px] after:w-full after:bg-transparent lg:pb-0 lg:after:h-0 lg:after:w-0;
+  }
+}
